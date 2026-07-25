@@ -202,6 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="coming-up-with-the-idea" class="level1">
 <h1>Coming up with the idea</h1>
 <p>This past summer I became pretty interested in mechanistic interpretability, and naturally I started learning about it through Neel Nanda’s blogs and the ARENA 3.0 exercises I found on GitHub. To actually apply what I was learning and explore current frontier research, I came up with two mini-projects. The first (the subject of this blog) is <em>“Comparing Steering Methods: Difference-of-Means vs Naive SAE vs Steelman SAE.”</em> The second is <em>“Circuit Tracers”</em> (currently in progress).</p>
+<p>You can explore the complete project repo here: <a href="https://github.com/Abhinav268/world-cup-steering">github.com/Abhinav268/world-cup-steering</a>.</p>
 <p>For the layman, your first question is probably what these obscure names mean. I’ll clear all that up in the methodology section.</p>
 <p>So how did I come up with the topic? I got really interested in steering and SAEs while working through the ARENA exercises, and I decided to look up the actual research. I chanced upon a debate about steering with the baseline method (difference-of-means) versus SAEs. The SAE skeptics ran an experiment comparing the two and found the baseline clearly beating the SAE on every measure. A later paper from SAE defenders argued that the SAEs simply weren’t being steered the right way, and with a better applied (“steelman”) SAE, it matched and sometimes outperformed the baseline. I thought: why not represent both stances in a single notebook? And that’s how this project came about.</p>
 <blockquote class="blockquote">
@@ -529,7 +530,7 @@ loss = ||x - x_reconstruction||^2   +   lambda * ||feats||_1
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Abhinav268\.github\.io\/abhinav268\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
